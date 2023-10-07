@@ -55,7 +55,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +122,7 @@ STATIC_URL = '/static/'
 
 # tell django to use my custom user model
 AUTH_USER_MODEL = 'accounts.CustomUser' #new
+
+# login logout redirect
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
