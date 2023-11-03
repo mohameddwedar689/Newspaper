@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #local
     'accounts', #new
     'pages', #new
+    'articles', #new
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Password email reset
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+
+# Time zone
+TIME_ZONE = 'Africa/Cairo'
